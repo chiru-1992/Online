@@ -1,42 +1,31 @@
-import { db } from "./firebase-config.js";
+=====================================
+ADMIN PANEL
+=====================================
 
-import {
-collection,
-onSnapshot
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+Reveal Code: [ NEWTICKET ] [Save]
 
-const ticketsRef = collection(db,"tickets");
+Available: 18
+Sold: 5
 
-onSnapshot(ticketsRef,(snapshot)=>{
+-------------------------------------
+Ticket 1
+Buyer: Rahul
+Phone: 9876543210
 
-console.clear();
+Payment: Pending
 
-console.log("========= LIVE TICKETS =========");
+[Approve] [Reject]
 
-snapshot.forEach(doc=>{
+-------------------------------------
 
-const t = doc.data();
+Ticket 2
+Buyer: Aman
 
-console.log(
+Payment: Approved
 
-"Ticket",
+Status: SOLD
 
-t.number,
+-------------------------------------
 
-"|",
-
-t.portugal,
-
-"vs",
-
-t.croatia,
-
-"|",
-
-t.sold ? "SOLD":"AVAILABLE"
-
-);
-
-});
-
-});
+...
+Ticket 23
