@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portugal vs Croatia Tickets</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+<h1>🇵🇹 PORTUGAL VS CROATIA 🇭🇷</h1>
+
+<h3>FIFA World Cup 2026</h3>
+
+<p>Round of 32</p>
+
+<div class="prizes">
+
+<p>🎫 Ticket Price : ₹50</p>
+
+<p>🥇 1st Prize : ₹500</p>
+
+<p>🥈 2nd Prize : ₹300</p>
+
+<p>🥉 3rd Prize : ₹200</p>
+
+</div>
+
+<div class="counter">
+
+<h3>
+Available :
+<span id="availableCount">23</span>
+</h3>
+
+<h3>
+Sold :
+<span id="soldCount">0</span>
+</h3>
+
+</div>
+
+</header>
+
+<section class="booking">
+
+<h2>Book Your Ticket</h2>
+
+<input
+type="text"
+id="buyerName"
+placeholder="Enter Your Name">
+
+<input
+type="tel"
+id="buyerPhone"
+placeholder="Mobile Number (Optional)">
+
+<button id="bookBtn">
+Book Next Available Ticket
+</button>
+
+</section>
+
+<section class="payment">
+
+<h2>Payment</h2>
+
+<p>Scan QR Code & Pay ₹50</p>
+
+<img
+id="qrImage"
+src="qr.png"
+alt="QR Code"
+width="220">
+
+<br><br>
+
+<button id="paidBtn">
+I Have Paid
+</button>
+
+</section>
+
+<section class="reveal">
+
+<h2>Reveal Your Ticket</h2>
+
+<input
+type="text"
+id="matchCode"
+placeholder="Enter Match Code">
+
+<button id="revealBtn">
+
+Reveal My Ticket
+
+</button>
+
+</section>
+
+<section id="myTicket">
+
+</section>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
