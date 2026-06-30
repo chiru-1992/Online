@@ -29,3 +29,62 @@ const soldCount=document.getElementById("soldCount");
 let bookedTicket=null;
 
 const MATCH_CODE="NEWTICKET";
+async function createTickets(){
+
+const snap=await getDocs(ticketsRef);
+
+if(!snap.empty)return;
+
+for(let i=0;i<23;i++){
+
+await setDoc(doc(db,"tickets","ticket"+(i+1)),{
+
+ticket:i+1,
+
+buyer:"",
+
+phone:"",
+
+paid:false,
+
+sold:false,
+
+revealed:false,
+
+portugal:players[i].portugal,
+
+croatia:players[i].croatia
+
+});
+
+}
+
+}
+
+createTickets();onSnapshot(ticketsRef,(snapshot)=>{
+
+let sold=0;
+
+let available=0;
+
+snapshot.forEach(doc=>{
+
+const t=doc.data();
+
+if(t.sold){
+
+sold++;
+
+}else{
+
+available++;
+
+}
+
+});
+
+availableCount.textContent=available;
+
+soldCount.textContent=sold;
+
+});
