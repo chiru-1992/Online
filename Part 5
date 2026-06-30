@@ -1,0 +1,42 @@
+import { db } from "./firebase-config.js";
+
+import {
+collection,
+onSnapshot
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const ticketsRef = collection(db,"tickets");
+
+onSnapshot(ticketsRef,(snapshot)=>{
+
+console.clear();
+
+console.log("========= LIVE TICKETS =========");
+
+snapshot.forEach(doc=>{
+
+const t = doc.data();
+
+console.log(
+
+"Ticket",
+
+t.number,
+
+"|",
+
+t.portugal,
+
+"vs",
+
+t.croatia,
+
+"|",
+
+t.sold ? "SOLD":"AVAILABLE"
+
+);
+
+});
+
+});
