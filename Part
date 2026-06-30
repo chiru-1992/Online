@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#0b1020;
+    color:#fff;
+}
+
+header{
+    background:#111827;
+    padding:20px;
+    text-align:center;
+    border-bottom:3px solid #00d084;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header h3{
+    color:#ffc107;
+    margin-bottom:15px;
+}
+
+.details{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.details p{
+    background:#1f2937;
+    padding:8px 15px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+#tickets{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.ticket{
+    background:#ffffff;
+    color:#000;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.ticket-top{
+    background:#006633;
+    color:#fff;
+    padding:15px;
+    text-align:center;
+}
+
+.ticket-top h2{
+    font-size:22px;
+}
+
+.ticket-body{
+    padding:15px;
+}
+
+.ticket-body p{
+    margin:8px 0;
+}
+
+.status{
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+    color:#fff;
+}
+
+.available{
+    background:#28a745;
+}
+
+.sold{
+    background:#dc3545;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    background:#007bff;
+    color:white;
+}
+
+button:hover{
+    background:#0056b3;
+}
